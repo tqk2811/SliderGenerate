@@ -23,7 +23,7 @@ namespace SliderGenerate
         protected readonly List<FileInfo> _FilesUsed = new List<FileInfo>();
         public IEnumerable<FileInfo> FilesUsed { get { return _FilesUsed; } }
 
-        internal Slide(List<FileInfo> images)
+        protected Slide(List<FileInfo> images)
         {
             if (images == null || images.Count == 0) throw new InvalidDataException(nameof(images));
             if (images.Count == 1) images.Add(images.First());
